@@ -9,7 +9,7 @@
 <div id="conteudo" class="container py-2" style="min-height: 650px;">
     <section aria-label="breadcrumb" class="bg-secondary-subtle mb-3 px-2 py-2 rounded">
         <ol class="breadcrumb text-uppercase mb-0">
-            <li class="breadcrumb-item"><a href="https://camaraourofino.mg.gov.br/"
+            <li class="breadcrumb-item"><a href="https://inconfidentes.mg.gov.br/"
                                            class="text-decoration-none text-secondary-emphasis">Página Inicial</a></li>
             <li class="breadcrumb-item active" aria-current="page"><a href="https://camaraourofino.mg.gov.br/balcao"
                                                                       class="text-decoration-none text-secondary-emphasis">Balcão
@@ -29,7 +29,7 @@
                         Acesso para Pessoas
                     </div>
                     <div class="card-body">
-                        <form action="/balcao/logar" method="post">
+                        <form action="/candidatos/login" method="post">
                             <div class="mb-3">
                                 <label for="txt-email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email" value="" required="">
@@ -60,7 +60,7 @@
                         Acesso para Empresas
                     </div>
                     <div class="card-body">
-                        <form action="/empresa/logar" method="post">
+                        <form action="./empresas/login" method="post">
                             <div class="mb-3">
                                 <label for="txt-email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email" value="" required="">
@@ -77,7 +77,7 @@
                                     type="text" name="campo1" value=""></div>
                         </form>
                         <div class="mt-3 text-center">
-                            <a href="/balcao/esqueciasenha/2" class="text-decoration-none text-dark"><i
+                            <a href="./esqueciasenha/2" class="text-decoration-none text-dark"><i
                                     class="bi bi-question-circle-fill"></i> Esqueceu a senha?</a> |
                             <a href="./Users/add" class="text-decoration-none text-dark"><i
                                     class="bi bi-person-fill-add"></i> Novo cadastro de empresa</a>

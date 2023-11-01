@@ -8,16 +8,9 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\Entity;
 
 class EmpresasController extends AppController
 {
-    public function login()
-    {
 
-    }
-
-    public function cadastro()
-    {
-
-    }
 }

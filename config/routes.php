@@ -38,8 +38,13 @@ return function (RouteBuilder $routes): void {
 
         $builder->fallbacks();
     });
+    $routes->prefix('admin', function (RouteBuilder $builder): void {
+        $builder->connect('/', ['controller' => 'Admin', 'action' => 'index']);
+
+        $builder->fallbacks();
+    });
     $routes->prefix('empresas', function (RouteBuilder $builder): void {
-        $builder->connect('/', ['controller' => 'Empresas', 'action' => 'dashboard']);
+        $builder->connect('/', ['controller' => 'Empresas', 'action' => 'index']);
 
         $builder->fallbacks();
     });
