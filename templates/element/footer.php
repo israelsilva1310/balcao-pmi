@@ -12,7 +12,7 @@
                 <?= $this->Html->image('Logo-PM-Inconfidentes-2021-2024.png', [
                     'height' => 'auto',
                     'width' => 'auto',
-                    'class'=>'img-fluid'
+                    'class' => 'img-fluid'
                 ]) ?>
             </div>
             <div class="col-md-6">
@@ -26,10 +26,13 @@
                 </address>
             </div>
             <div class="col-md-3 align-self-center fs-3">
+                <a href="https://github.com/israelsilva1310/patsul" target="_blank" class="text-white"><i
+                        class="bi bi-github"></i></a>
                 <a href="https://www.facebook.com/inconfidedentesmg/" target="_blank" class="text-white"><i
                         class="bi bi-facebook"></i></a>
                 <a href="https://www.youtube.com/channel/UCFIuGvginDRjFWhGBEJ0hEA" target="_blank" class="text-white"><i
-                        class="bi bi-youtube"></i></a>
+                        class="bi bi-youtube"></i>
+                </a>
             </div>
         </div>
     </div>
