@@ -9,7 +9,11 @@
     <div class="container py-3">
         <div class="row">
             <div class="col-6 col-md-3 pb-3 mx-auto">
-                <img src="/public/img/logo.png" class="img-fluid">
+                <?= $this->Html->image('Logo-PM-Inconfidentes-2021-2024.png', [
+                    'height' => 'auto',
+                    'width' => 'auto',
+                    'class'=>'img-fluid'
+                ]) ?>
             </div>
             <div class="col-md-6">
                 <address class="text-white text-md-start">
