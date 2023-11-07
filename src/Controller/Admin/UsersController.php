@@ -1,10 +1,22 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace App\Controller\Admin;
+
+use App\Controller\AppController;
+
+/**
+ * Users Controller
+ *
+ * @property \App\Model\Table\UsersTable $Users
+ */
 class UsersController extends AppController
 {
-
+    /**
+     * Index method
+     *
+     * @return \Cake\Http\Response|null|void Renders view
+     */
     public function index()
     {
         $query = $this->Users->find();
@@ -13,12 +25,24 @@ class UsersController extends AppController
         $this->set(compact('users'));
     }
 
+    /**
+     * View method
+     *
+     * @param string|null $id User id.
+     * @return \Cake\Http\Response|null|void Renders view
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
     public function view($id = null)
     {
         $user = $this->Users->get($id, contain: []);
         $this->set(compact('user'));
     }
 
+    /**
+     * Add method
+     *
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     */
     public function add()
     {
         $user = $this->Users->newEmptyEntity();
@@ -34,6 +58,13 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
+    /**
+     * Edit method
+     *
+     * @param string|null $id User id.
+     * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
     public function edit($id = null)
     {
         $user = $this->Users->get($id, contain: []);
@@ -49,6 +80,13 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
+    /**
+     * Delete method
+     *
+     * @param string|null $id User id.
+     * @return \Cake\Http\Response|null Redirects to index.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
@@ -60,32 +98,5 @@ class UsersController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
-    }
-
-    public function beforeFilter(Event $event)
-    {
-        parent::beforeFilter($event);
-// Permitir aos usuários se registrarem e efetuar logout.
-// Você não deve adicionar a ação de "login" a lista de permissões.
-// Isto pode causar problemas com o funcionamento normal do AuthComponent.
-        $this->Auth->allow(['add', 'logout']);
-    }
-
-    public function login()
-    {
-        if ($this->request->is('post')) {
-            $user = $this->Auth->identify();
-            if ($user) {
-                $this->Auth->setUser($user);
-                return $this->redirect($this->Auth->redirectUrl());
-            }
-            $this->Flash->error('Usuario ou senha estão errados, tente novamente.');
-        }
-    }
-
-    public function logout()
-    {
-        $this->Flash->success('Voce foi deslogado.');
-        return $this->redirect($this->Auth->logout());
     }
 }

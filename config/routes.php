@@ -30,7 +30,7 @@ return function (RouteBuilder $routes): void {
     $routes->scope('/', function (RouteBuilder $builder): void {
         $builder->connect('/', ['controller' => 'Balcao', 'action' => 'index']);
         $builder->connect('/cadastro/curriculo', ['controller' => 'Users', 'action' => 'login']);
-        $builder->connect('/empresas/cadastro', ['controller' => 'Empresas', 'action' => 'cadastro']);
+        $builder->connect('/empresas', ['controller' => 'Empresas', 'action' => 'index']);
         $builder->connect('/cadastro/empresas', ['controller' => 'Empresas', 'action' => 'cadastro']);
         $builder->connect('login', ['controller' => 'Users', 'action' => 'login']);
 
@@ -43,16 +43,7 @@ return function (RouteBuilder $routes): void {
 
         $builder->fallbacks();
     });
-    $routes->prefix('empresas', function (RouteBuilder $builder): void {
-        $builder->connect('/', ['controller' => 'Empresas', 'action' => 'index']);
 
-        $builder->fallbacks();
-    });
-    $routes->prefix('candidatos', function (RouteBuilder $builder): void {
-        $builder->connect('/', ['controller' => 'Candidatos', 'action' => 'dashboard']);
-
-        $builder->fallbacks();
-    });
     $routes->scope('/api', function (RouteBuilder $builder): void {
         $builder->setExtensions(['json', 'xml']);
     });
