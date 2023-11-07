@@ -13,7 +13,7 @@
         "cakephp/authentication": ">=2.0.0",
         "friendsofcake/cakepdf": "^5.0",
         "jarouche/viacep": "^1.2",
-        "mobiledetect/mobiledetectlib": "^3.74"
+        "mobiledetect/mobiledetectlib": "^4.8"
     },
     "require-dev": {
         "cakephp/bake": "^3.0.0",
