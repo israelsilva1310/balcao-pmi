@@ -76,23 +76,23 @@
         },
         {
             "name": "cakephp/authorization",
-            "version": "3.0.1",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/authorization.git",
-                "reference": "d11757715be992f290d5599c0cb7105d0ce9b73d"
+                "reference": "b26b48f0b6fca92152f1797b2d898051581038d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/authorization/zipball/d11757715be992f290d5599c0cb7105d0ce9b73d",
-                "reference": "d11757715be992f290d5599c0cb7105d0ce9b73d",
+                "url": "https://api.github.com/repos/cakephp/authorization/zipball/b26b48f0b6fca92152f1797b2d898051581038d3",
+                "reference": "b26b48f0b6fca92152f1797b2d898051581038d3",
                 "shasum": ""
             },
             "require": {
                 "cakephp/http": "^5.0",
                 "php": ">=8.1",
                 "psr/http-client": "^1.0",
-                "psr/http-message": "^2.0",
+                "psr/http-message": "^1.1 || ^2.0",
                 "psr/http-server-handler": "^1.0",
                 "psr/http-server-middleware": "^1.0"
             },
@@ -101,7 +101,6 @@
                 "cakephp/bake": "^3.0",
                 "cakephp/cakephp": "^5.0",
                 "cakephp/cakephp-codesniffer": "^5.0",
-                "cakephp/plugin-installer": "^1.3",
                 "phpunit/phpunit": "^10.1.0"
             },
             "suggest": {
@@ -138,7 +137,7 @@
                 "issues": "https://github.com/cakephp/authorization/issues",
                 "source": "https://github.com/cakephp/authorization"
             },
-            "time": "2023-09-10T03:43:35+00:00"
+            "time": "2023-11-13T02:12:15+00:00"
         },
         {
             "name": "cakephp/cakephp",
@@ -5967,5 +5966,5 @@
         "php": ">=7.0 || 8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
